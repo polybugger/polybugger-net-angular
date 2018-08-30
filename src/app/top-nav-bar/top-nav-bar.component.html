@@ -2,7 +2,7 @@
   <div *ngIf="_auth.isSignedIn(); then authSignOut; else authSignIn"></div>
   <ng-template #authSignIn>
     <a class="nav-item nav-link btn btn-light" (click)="_auth.signIn('', '')">
-      <mat-icon class="align-middle d-sm-none">forward</mat-icon>
+      <mat-icon class="align-bottom d-sm-none">forward</mat-icon>
       <span class="d-none d-sm-inline">Sign In</span>
     </a>
   </ng-template>
@@ -11,11 +11,11 @@
       <span id="profile-name">Profile Name</span>
     </a>
     <a class="nav-item nav-link btn btn-light">
-      <mat-icon class="align-middle d-sm-none">settings</mat-icon>
+      <mat-icon class="align-bottom d-sm-none">settings</mat-icon>
       <span class="d-none d-sm-inline">Settings</span>
     </a>
     <a class="nav-item nav-link btn btn-light" (click)="_auth.signOut()">
-      <mat-icon class="align-middle d-sm-none">reply</mat-icon>
+      <mat-icon class="align-bottom d-sm-none">reply</mat-icon>
       <span class="d-none d-sm-inline">Sign Out</span>
     </a>
   </ng-template>

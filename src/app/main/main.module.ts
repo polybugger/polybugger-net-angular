@@ -5,28 +5,26 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { environment } from '../environments/environment';
 
-import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { SignInComponent } from './sign-in/sign-in.component';
-import { RegisterComponent } from './register/register.component';
-import { AppComponent } from './app.component';
-import { MainModule } from './main/main.module';
-import { AppRoutingModule } from './/app-routing.module';
+import { MainNavBarComponent } from './main-nav-bar/main-nav-bar.component';
+import { MainComponent } from './main/main.component';
+import { ClassesComponent } from './classes/classes.component';
+import { TeachersComponent } from './teachers/teachers.component';
+import { StudentsComponent } from './students/students.component';
+import { SchoolmatesComponent } from './schoolmates/schoolmates.component';
+import { MainRoutingModule } from './/main-routing.module';
 
 @NgModule({
   declarations: [
-    TopNavBarComponent,
-    WelcomeComponent,
-    SignInComponent,
-    RegisterComponent,
-    AppComponent
-  ],
+    MainNavBarComponent,
+    MainComponent,
+    ClassesComponent,
+    TeachersComponent,
+    StudentsComponent,
+    SchoolmatesComponent],
   imports: [
     BrowserModule,
     FormsModule,
@@ -34,13 +32,10 @@ import { AppRoutingModule } from './/app-routing.module';
     BrowserAnimationsModule,
     MatIconModule,
     NgbModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule,
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    MainModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    MainRoutingModule
+  ]
 })
-export class AppModule { }
+export class MainModule { }
